@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eight</title>
+
+    <style>
+         html, body {
+        margin: 0;
+        padding: 0;
+        }
+
+        @font-face {
+        font-family: haasb;
+        src: url(libraries/AlteHaasGroteskBold.ttf);
+        }
+
+      @font-face {
+        font-family: haasr;
+        src: url(libraries/AlteHaasGroteskRegular.ttf);
+        }
+
+      h1 {
+        font-family: haasb;
+        font-size: xx-large;
+      }
+
+      h2 {
+        font-family: haasb;
+        font-size: xx-large;
+      }
+
+      p {
+        font-family: haasr;
+        text-align: justify;
+      }
+
+      .workshop {
+        background-color: rgb(208, 14, 114);
+        color: white;
+    }
+
+    .fade-in-observe {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 2s ease, transform 2s ease;
+        }
+
+        .fade-in-observe.visible {
+        opacity: 1;
+        transform: translateY(0);
+        }
+
+        .next {
+        font-size: x-small;
+        text-align: center;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <h1  style="text-align: left; padding-left: 5vw; padding-top: 5vw;">getting into...</h1>
+
+    <iframe src="wk8/wk8header/index.html" style="border: none; height: 60vh; width: 100vw;"></iframe>
+
+    <!-- <h1  style="text-align: right; padding-right: 5vw; padding-top: 5vw; transform: translateY(-150px);">hardware and concepts</h1> -->
+
+    <br>
+    <br>
+
+    <p style="font-family: haasb; font-size: x-large; padding-left: 50vw; padding-right: 10vw; ">
+        ARDUINO BOARD
+    </p>
+
+    <div class="fade-in-observe">
+    <p style="padding-left: 50vw; padding-right: 10vw; font-size:x-large;">
+        The main circuit board of a device that connects and allows communication between all different parts of the system. 
+        <br>
+        <br>
+        They possess pins that allow these connections, A0-A5 being analog and 0-13 being digital. Analog pins are either 'on' (high) or 'off' (low), while digital pins can regulate power output and adjust internal resistors.
+        <br>
+        <br>
+        One thing to know is that <em>GROUND or GND (-)</em> is necessary in all computers, whereby positive charge turns into negative. This neutralisation prevents currents from travelling in unpredictable ways.
+    </p>
+    </div>
+
+    <br>
+    <br>
+
+    <p style="font-family: haasb; font-size: x-large; padding-left: 10vw; padding-right: 50vw; ">
+        SENSE
+    </p>
+
+    <div class="fade-in-observe">
+        <p style="padding-left: 10vw; padding-right: 50vw; font-size:x-large;">
+        What a device senses is what <em>input</em> it recieves. Arduino reads and measures any changes of voltage, resistance, or current in the input, and manifests these in its output.
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <p style="font-family: haasb; font-size: x-large; padding-left: 50vw; padding-right: 10vw; ">
+        CONTROL
+    </p>
+
+    <div class="fade-in-observe">
+    <p style="padding-left: 50vw; padding-right: 10vw; font-size:x-large;">
+        What the device controls is what <em>output</em> it creates by sending currents through the Arduino board pins. Outputs can exist in many forms, including motors, sound, and light etc.
+    </p>
+    </div>
+
+    <br>
+    <br>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            }
+        });
+        });
+
+        document.querySelectorAll('.fade-in-observe').forEach(el => {
+        observer.observe(el);
+        });
+    </script>
+
+    <p style="font-family: haasb; font-size: x-large; padding-left: 10vw; padding-right: 50vw; ">
+        ARDUINO CODE
+    </p>
+    <p style="padding-left: 10vw; padding-right: 50vw; font-size:x-large;">
+        type on the arduino sketch to find out more...
+        </p>
+    
+
+    <center>
+    <iframe src="wk8/8ardcode/index.html" height="750" width="80%" style="border: 1.5px solid rgb(208, 14, 114);"></iframe>
+    </center>
+
+    <marquee scrollamount="15">
+        <img src="imgs/arduino_mboard.png">
+    </marquee>
+
+    <div class="workshop">
+        <h1 style="text-align: left; padding-left: 5vw; padding-top: 5vw; font-size: 10vh;">
+            WHAT<br>WE<br>DID<br>THIS<br>WEEK:
+        </h1>
+
+        <p style="font-family: haasb; font-size: x-large; padding-left: 50vw; padding-right: 10vw; ">
+            We continued further with tinkering with our Arduino devices.
+            <br>
+            <br>
+            Click on each potato to see what fate it awaits...
+        </p>
+
+        <center>
+            <iframe src="wk8/sketch_8potatoworkshop/index.html" height="750" width="80%" style="border: 1.5px solid rgb(208, 14, 114);"></iframe>
+        </center>
+
+        <p style="font-size: x-large; padding-left: 10vw; padding-right: 50vw; ">
+            If you touched the potato, it would scream.
+        </p>
+        <br>
+        <br>
+
+        <center>
+        <img src="imgs/8ard.jpg" width="80%" height="auto">
+        </center>
+
+        <p style="font-size: x-large; padding-left: 50vw; padding-right: 10vw; ">
+            And we also did this. The lights were supposed to work in hand with the control of the remote, but no one's machines were working.
+        </p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <center>
+            <a href="wk9.html">
+            <img src="imgs/scard.png" height="150px" width="auto">
+            </a>
+        </center>
+        <h1 class="next">NEXT</h1>
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    
+    
+
+    
+</body>
+</html>
